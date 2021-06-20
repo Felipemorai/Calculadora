@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: whitesmoke;
+    padding: 30px 0;
+}
+.calculator {
+    width: 400px;
+    margin: 0 auto;
+    background-color: mediumpurple;
+}
+.calculator-buttons {
+    
+}
