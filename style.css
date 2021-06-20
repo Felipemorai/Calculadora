@@ -13,6 +13,7 @@ body {
     background-color: mediumpurple;
     border: solid 2px mediumslateblue;
     border-radius: 5px;
+    padding: 20px;
 }
 .display {
     display: flex;
@@ -20,9 +21,9 @@ body {
     width: 100%;
     height: 100px;
     margin-bottom: 20px;
-    padding: 15px;
+    padding: 20px;
     background-color: white;
-     border: solid 15px mediumpurple;
+    border: solid 1px mediumpurple;
     color: black;
     font: normal 2rem sans-serif;
     overflow: hidden;
@@ -31,4 +32,18 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 12px;
+}
+.calculator button {
+    background-color: springgreen;
+    border: solid 2px palegreen;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 1.5rem;
+    outline: none;
+    transition: all 500ms ease;
+}
+.calculator button:hover {
+    background-color: mediumpurple;
+    border: solid 2px palegreen;
+    cursor: pointer;
 }
