@@ -8,6 +8,18 @@ let newNumber = true;
 let operater;
 let numberPrevious;
 
+const pendingOperation = () => operater !== undefined;
+
+const calculate = () => {
+    if (pendingOperation()){
+        const numberActual = parseFloat (display.textContent);
+        newNumber = true;
+        if (operater == '+'){
+            updateDisplay(numberPrevious + numberActual);
+        }
+    }
+}
+
 const updateDisplay = (text) => {
     if (newNumber){
         display.textContent = text;
@@ -25,10 +37,11 @@ numbers.forEach (number =>
 );
 
 const selectOperater = (event) => {
-    if (!newNumber){
+    if (!newNumber) {
+        calculate();
         newNumber = true;
         operater = event.target.textContent;
-        numberPrevious = display.textContent;
+        numberPrevious = parseFloat (display.textContent);
         console.log (operater); 
     }
 }
