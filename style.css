@@ -10,8 +10,8 @@ body {
 .calculator {
     width: 400px;
     margin: 0 auto;
-    background-color: mediumpurple;
-    border: solid 2px mediumslateblue;
+    background-color: #b3093f;
+    border: solid 2px #ff3877;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 0 15px black;
@@ -24,7 +24,7 @@ body {
     margin-bottom: 20px;
     padding: 20px;
     background-color: white;
-    border: solid 1px mediumpurple;
+    border: solid 1px #ff3877;
     color: black;
     font: normal 2rem sans-serif;
     overflow: hidden;
@@ -35,8 +35,8 @@ body {
     grid-gap: 12px;
 }
 .calculator button {
-    background-color: springgreen;
-    border: solid 2px palegreen;
+    background-color: #a5befa;
+    border: solid 2px #64b7cc;
     border-radius: 50px;
     padding: 20px;
     font-size: 1.5rem;
@@ -44,7 +44,7 @@ body {
     transition: all 500ms ease;
 }
 .calculator button:hover {
-    background-color: mediumpurple;
-    border: solid 2px palegreen;
+    background-color: #b3093f;
+    border: solid 2px #64b7cc;
     cursor: pointer;
 }
