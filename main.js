@@ -14,9 +14,8 @@ const calculate = () => {
     if (pendingOperation()){
         const numberActual = parseFloat (display.textContent);
         newNumber = true;
-        if (operater == '+'){
-            updateDisplay(numberPrevious + numberActual);
-        }
+        const resultado = eval (`${numberPrevious}${operater}${numberActual}`);
+        updateDisplay(resultado);
     }
 }
 
