@@ -46,3 +46,14 @@ const selectOperater = (event) => {
 }
 
 operaters.forEach (operater => operater.addEventListener('click', selectOperater));
+
+const activateEqual = () => {
+    calculate();
+    operater = undefined;
+}
+
+document.getElementById('equal').addEventListener('click', activateEqual);
+
+const cleanDisplay = () => display.textContent = ''; 
+
+document.getElementById('cleanDisplay').addEventListener('click', cleanDisplay);
