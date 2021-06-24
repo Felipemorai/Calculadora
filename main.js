@@ -66,3 +66,7 @@ const cleanCalculate = () => {
 }
 
 document.getElementById('cleanCalculate').addEventListener('click', cleanCalculate);
+
+const removeLastNumber = () => display.textContent = display.textContent.slice(0, -1);
+
+document.getElementById('backspace').addEventListener('click', removeLastNumber);
