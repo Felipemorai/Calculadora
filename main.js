@@ -57,3 +57,12 @@ document.getElementById('equal').addEventListener('click', activateEqual);
 const cleanDisplay = () => display.textContent = ''; 
 
 document.getElementById('cleanDisplay').addEventListener('click', cleanDisplay);
+
+const cleanCalculate = () => {
+    cleanDisplay();
+    operater = undefined;
+    newNumber = true;
+    numberPrevious = undefined; 
+}
+
+document.getElementById('cleanCalculate').addEventListener('click', cleanCalculate);
