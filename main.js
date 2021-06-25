@@ -70,3 +70,9 @@ document.getElementById('cleanCalculate').addEventListener('click', cleanCalcula
 const removeLastNumber = () => display.textContent = display.textContent.slice(0, -1);
 
 document.getElementById('backspace').addEventListener('click', removeLastNumber);
+
+const invertSignal = () => {
+    newNumber = true; 
+    updateDisplay (display.textContent * -1);
+}
+document.getElementById('invert').addEventListener('click', invertSignal);
