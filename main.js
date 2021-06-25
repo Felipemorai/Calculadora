@@ -75,4 +75,22 @@ const invertSignal = () => {
     newNumber = true; 
     updateDisplay (display.textContent * -1);
 }
+
 document.getElementById('invert').addEventListener('click', invertSignal);
+
+const existDecimal = () => display.textContent.indexOf(',') !== -1;
+
+const existValue = () => display.textContent.length > 0; 
+
+const insertDecimal = () => {
+    if (!existDecimal()) {
+        if (existValue()) {
+            updateDisplay(',');
+        }
+        else {
+            updateDisplay('0,');
+        }
+    }
+}
+
+document.getElementById('decimal').addEventListener('click', insertDecimal);
