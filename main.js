@@ -12,7 +12,7 @@ const pendingOperation = () => operater !== undefined;
 
 const calculate = () => {
     if (pendingOperation()){
-        const numberActual = parseFloat (display.textContent);
+        const numberActual = parseFloat (display.textContent.replace(',','.'));
         newNumber = true;
         const resultado = eval (`${numberPrevious}${operater}${numberActual}`);
         updateDisplay(resultado);
@@ -40,7 +40,7 @@ const selectOperater = (event) => {
         calculate();
         newNumber = true;
         operater = event.target.textContent;
-        numberPrevious = parseFloat (display.textContent);
+        numberPrevious = parseFloat (display.textContent.replace(',','.'));
         console.log (operater); 
     }
 }
