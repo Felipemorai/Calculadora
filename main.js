@@ -117,6 +117,8 @@ const mapKeyboard = {
 const mapsKeyboard = (event) => {
     const key = event.key 
     console.log (event.key)
+    const keyAllowed = () => Object.keys(mapKeyboard).indexOf(key) !== -1;
+    if (keyAllowed())
     document.getElementById(mapKeyboard[key]).click();
 }
 
