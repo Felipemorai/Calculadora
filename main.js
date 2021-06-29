@@ -21,11 +21,11 @@ const calculate = () => {
 
 const updateDisplay = (text) => {
     if (newNumber){
-        display.textContent = text;
+        display.textContent = text.toLocaleString('BR');
         newNumber = false;
     }
     else{
-        display.textContent += text;
+        display.textContent += text.toLocaleString('BR');
     }
 }
 
@@ -94,3 +94,30 @@ const insertDecimal = () => {
 }
 
 document.getElementById('decimal').addEventListener('click', insertDecimal);
+
+
+const mapKeyboard = {
+    '0' : 'key0',
+    '1' : 'key1',
+    '2' : 'key2',
+    '3' : 'key3',
+    '4' : 'key4',
+    '5' : 'key5',
+    '6' : 'key6',
+    '7' : 'key7',
+    '8' : 'key8',
+    '9' : 'key9',
+    '+' : 'operaterAddition',
+    '-' : 'operaterSubstract',
+    '*' : 'operaterMultiply',
+    '/' : 'operaterDivide',
+    '=' : 'equal', 
+}
+
+const mapsKeyboard = (event) => {
+    const key = event.key 
+    console.log (event.key)
+    document.getElementById(mapKeyboard[key]).click();
+}
+
+document.addEventListener('keydown', mapsKeyboard);
